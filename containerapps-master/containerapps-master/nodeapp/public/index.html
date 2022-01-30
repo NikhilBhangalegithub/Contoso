@@ -6,6 +6,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet">
     <script src="scripts/bootstrap.min.js"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".view").click(function () {
+                $("#specification").slideDown(3000);
+            });
+            $(".close").click(function () {
+                $("#specifications").slideUp(4000);
+            });
+        });
+    </script>
  
 </head>
 <body ng-controller="RetailerIndexController">
@@ -32,7 +44,25 @@
     <video controls width="300" height="300" autoplay>
         <source src="Radha-Krishna-Very-Sad-Whatsapp-Status-Video.mp4" type="video/mp4" />
     </video>
-    
+     <div>
+        <div>
+            <ul>
+                <li>SamSung <a href="#" class="view"> View Specification</a></li>
+                <li>Nokia <a href="#" class="view"> View Specification</a></li>
+                <li>Vivo <a href="#" class="view"> View Specification</a></li>
+                <li>PocoM2Pro <a href="#" class="view"> View Specification</a></li>
+            </ul>
+        </div>
+        <div id="specification" style="display:none;background-color:aqua">
+            <p> RAM : 18 GB </p>
+            <p> OS : Android 12.0</p>
+            <p> Dual sim : Yes </p>
+            <p> Battery : 6000 mph </p>
+            <p> camera : 20mp front 5mp rear</p>
+            <p> Storage : 128 GB </p>
+            <a href="#" class="close">Close details </a>
+        </div>
+    </div>
     
 </body>
 </html>
